@@ -40,8 +40,8 @@ class ListController extends AppController
     public function mostra()
     {
 
-        $articles = TableRegistry::getTableLocator()->get('flowers');
-        $query = $articles->find('all', [
+        $flowers = TableRegistry::getTableLocator()->get('flowers');
+        $query = $flowers->find('all', [
             'contain' => ['opportunities']
 
         ]);
